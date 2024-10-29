@@ -1,0 +1,37 @@
+body,html{
+  background-color: #333;
+  color:#fff;
+
+  font-size: 32px;
+}
+
+header{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+a{
+  color:#bada55;
+}
+
+nav{
+  display: flex;
+  gap:1em;
+}
+
+li{
+  margin:1em 0;
+}
+li span{
+  display: block;
+}
+
+form div{
+  margin:1em 0;
+}
+
+form input,
+form button{
+  font-size:1em;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Todo List of Destiny</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/main.css" />
+  </head>
+  <body>
+    <%- include("_header") %>
+    <main>
+      <ul>
+        <li>
+          <span><%= todo.task %></span>
+          <span><%= todo.description %></span>
+          <% if(todo.isComplete){ %>
+          <span>Completed!</span>
+          <form action="/todos/<%= todo.id %>/update" method="POST">
+            <button>Mark as incomplete</button>
+          </form>
+          <form action="/todos/<%= todo.id %>/delete" method="POST">
+            <button>Delete</button>
+          </form>
+          <% } else { %>
+          <span>Not completed :(</span>
+          <form action="/todos/<%= todo.id %>/update" method="POST">
+            <button>Mark as complete</button>
+          </form>
+          <% } %>
+        </li>
+      </ul>
+    </main>
+  </body>
+</html>
