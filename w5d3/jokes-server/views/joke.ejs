@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Joke #<%= joke.id %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Joke #<%= joke.id %></h1>
+    <p>Question: <%= joke.question %></p>
+    <p>Answer: <%= joke.answer %></p>
+    <p>Rating: <%= joke.rating %></p>
+    <p>Author: <%= joke.author_name ? joke.author_name : "Unknown author" %></p>
+  </body>
+</html>
